@@ -18,11 +18,7 @@ set -e
 
 # Required!
 export DEVICE=m31
-
-ifeq ($(common_dir), universal9610-common)
 export DEVICE_COMMON=universal9610-common
-          universal9610-common 
-          universal9611-common
 export VENDOR=samsung
 
 export DEVICE_BRINGUP_YEAR=2020
