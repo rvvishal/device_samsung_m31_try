@@ -29,11 +29,14 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 else ifeq ($(ROM_TYPE), lineage)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 else 
-$(call inherit-product, vendor/$(ROM)/config/common.mk)
+$(call inherit-product, vendor/$(ROM_dir)/config/common.mk)
 endif
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m31
