@@ -42,7 +42,7 @@ else indef ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
 ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage
 else indef ($(COMMON_LUNCH_CHOICES), aosp_m31-*)
 ROM=aosp ROM_TYPE=aosp VENDOR_DIR_TYPE=aosp
-
+endif
      
      
      
