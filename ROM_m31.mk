@@ -29,7 +29,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 else ifeq ($(ROM_TYPE), lineage)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 else 
-$(call inherit-product, vendor/$(ROM)/config/common.mk)
+$(call inherit-product, vendor/$(VENDOR_DIR_TYPE)/config/common.mk)
 endif
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
