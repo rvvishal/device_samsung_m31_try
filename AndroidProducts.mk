@@ -22,8 +22,26 @@ COMMON_LUNCH_CHOICES := \
      lineage_m31-userdebug \
      lineage_m31-eng \
      lineage_m31-user
-     
 
+## SAKURA OS
+COMMON_LUNCH_CHOICES := \
+     lineage_m31-userdebug \
+     lineage_m31-eng \
+     lineage_m31-user
+     
+## AOSP EXTENDED 
+COMMON_LUNCH_CHOICES := \
+     aosp_m31-userdebug \
+     aosp_m31-eng \
+     aosp_m31-user
+
+     
+indef ($(COMMON_LUNCH_CHOICES), lineage_m31-*)
+ROM=lineage VENDOR_DIR_TYPE=lineage
+else indef ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
+ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage
+else indef ($(COMMON_LUNCH_CHOICES), aosp_m31-*)
+ROM=aosp ROM_TYPE=aosp VENDOR_DIR_TYPE=aosp
 
      
      
