@@ -50,10 +50,12 @@ BUILD_FINGERPRINT := samsung/m31nsxx/m31:10/QP1A.190711.020/M315FXXU2ATJ9:user/r
 else
 BUILD_FINGERPRINT := samsung/m31nsxx/m31:11/RP1A.200720.012/M315FXXU2BUD1:user/release-keys
 
-PRIVATE_BUILD_DESC_UNI= ifeq ($(ANDROID_VERSION), 10)
-                        PRIVATE_BUILD_DESC="m31nsxx-user 10 QP1A.190711.020 M315FXXU2ATJ9 release-keys"
-                        else
-                        PRIVATE_BUILD_DESC="m31nsxx-user 11 RP1A.200720.012 M315FXXU2BUD1 release-keys"
+PRIVATE_BUILD_DESC_UNI={
+ifeq ($(ANDROID_VERSION), 10)
+PRIVATE_BUILD_DESC="m31nsxx-user 10 QP1A.190711.020 M315FXXU2ATJ9 release-keys"
+else
+PRIVATE_BUILD_DESC="m31nsxx-user 11 RP1A.200720.012 M315FXXU2BUD1 release-keys"
+}
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=m31nsxx \
