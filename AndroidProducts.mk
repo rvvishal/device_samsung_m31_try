@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+ANDROID_VERSION ?= $(ANDROID_VERSION)
+
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/ROM_m31.mk
 
