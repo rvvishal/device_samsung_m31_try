@@ -38,7 +38,7 @@ COMMON_LUNCH_CHOICES := \
      aosp_m31-user
 
      
-ifeq ($(COMMON_LUNCH_CHOICES), lineage_m31-*)
+ifeq ($(COMMON_LUNCH_CHOICES), lineage_m31-userdebug)
 ROM=lineage VENDOR_DIR_TYPE=lineage
 else ifeq ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
 ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage
