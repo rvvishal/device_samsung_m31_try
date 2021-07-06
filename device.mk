@@ -47,6 +47,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.exynos9611:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9611
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    mx_log_collection.sh \
+    mx_logger.sh \
+    mx_logger_dump.sh \
+    fstab.exynos9611 \
+    ueventd.qcom.rc \
+
 # Screen density
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xlarge
