@@ -31,19 +31,11 @@ COMMON_LUNCH_CHOICES := \
      sakura_m31-eng \
      sakura_m31-user
      
-## AOSP EXTENDED 
-COMMON_LUNCH_CHOICES := \
-     aosp_m31-userdebug \
-     aosp_m31-eng \
-     aosp_m31-user
-
      
 ifeq ($(COMMON_LUNCH_CHOICES), lineage_m31-userdebug)
 ROM=lineage VENDOR_DIR_TYPE=lineage CODENAME=lineage
-else ifeq ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
+else ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
 ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage CODENAME=sakura
-else ifeq ($(COMMON_LUNCH_CHOICES), aosp_m31-*)
-ROM=aosp ROM_TYPE=aosp VENDOR_DIR_TYPE=aosp CODENAME=aosp
 endif
      
      
