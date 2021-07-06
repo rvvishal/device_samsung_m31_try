@@ -27,9 +27,9 @@ COMMON_LUNCH_CHOICES := \
 
 ## SAKURA OS
 COMMON_LUNCH_CHOICES := \
-     lineage_m31-userdebug \
-     lineage_m31-eng \
-     lineage_m31-user
+     sakura_m31-userdebug \
+     sakura_m31-eng \
+     sakura_m31-user
      
 ## AOSP EXTENDED 
 COMMON_LUNCH_CHOICES := \
