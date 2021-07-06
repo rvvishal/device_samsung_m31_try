@@ -40,7 +40,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m31
-PRODUCT_NAME := $(CODENAME)_m31
+PRODUCT_NAME := sakura_m31
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M315F
 PRODUCT_MANUFACTURER := samsung
