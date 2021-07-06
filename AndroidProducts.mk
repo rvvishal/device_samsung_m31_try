@@ -39,11 +39,11 @@ COMMON_LUNCH_CHOICES := \
 
      
 ifeq ($(COMMON_LUNCH_CHOICES), lineage_m31-userdebug)
-ROM=lineage VENDOR_DIR_TYPE=lineage
+ROM=lineage VENDOR_DIR_TYPE=lineage CODENAME=lineage
 else ifeq ($(COMMON_LUNCH_CHOICES), sakura_m31-*)
-ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage
+ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage CODENAME=sakura
 else ifeq ($(COMMON_LUNCH_CHOICES), aosp_m31-*)
-ROM=aosp ROM_TYPE=aosp VENDOR_DIR_TYPE=aosp
+ROM=aosp ROM_TYPE=aosp VENDOR_DIR_TYPE=aosp CODENAME=aosp
 endif
      
      
