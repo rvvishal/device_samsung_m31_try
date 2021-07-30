@@ -17,24 +17,16 @@
 ANDROID_VERSION ?= $(ANDROID_VERSION)
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/$(ROM)_m31.mk
+    $(LOCAL_DIR)/$(ROM)_$(DEVICE).mk
 
 ## LINEGAE OS
 COMMON_LUNCH_CHOICES := \
-     lineage_m31-userdebug \
-     lineage_m31-eng \
-     lineage_m31-user
+     lineage_$(DEVICE)-userdebug \
+     sakura_$(DEVICE)-userdebug 
 
-## SAKURA OS
-COMMON_LUNCH_CHOICES := \
-     sakura_m31-userdebug \
-     sakura_m31-eng \
-     sakura_m31-user
-     
-     
-ifeq ($(COMMON_LUNCH_CHOICES), lineage_m31-userdebug)
+ifeq ($(COMMON_LUNCH_CHOICES), lineage_$(DEVICE)-userdebug)
 ROM=lineage VENDOR_DIR_TYPE=lineage CODENAME=lineage
-else
+ifeq
 ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage CODENAME=sakura
 endif
      
