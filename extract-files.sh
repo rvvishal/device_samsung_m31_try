@@ -25,7 +25,7 @@ set -e
 ROM_ROOT="$MY_DIR"/../../..
 
 # Required!
-export DEVICE=m31
+export DEVICE=$(DEVICE)
 export DEVICE_COMMON=universal9610-common
 export VENDOR=samsung
 
