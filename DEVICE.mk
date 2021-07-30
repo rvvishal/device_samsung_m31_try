@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/m31/device.mk)
+$(call inherit-product, device/samsung/$(DEVICE)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common ROM stuff
@@ -39,10 +39,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := m31
-PRODUCT_NAME := sakura_m31
+PRODUCT_DEVICE := $(DEVICE)
+PRODUCT_NAME := $(ROM)_$(DEVICE)
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-M315F
+PRODUCT_MODEL := SM-$(DEVICE)5F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
@@ -63,5 +63,5 @@ endif
 }
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=m31nsxx \
+        PRODUCT_NAME=$(DEVICE)nsxx \
         $(PRIVATE_BUILD_DESC_UNI)
