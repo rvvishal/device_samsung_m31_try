@@ -14,22 +14,22 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/m31
+DEVICE_PATH := device/samsung/$(DEVICE)
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := m31nsxx,m31xx,m31
+TARGET_OTA_ASSERT_DEVICE := $(DEVICE)nsxx,$(DEVICE)xx,$(DEVICE)
 
 # Display
 TARGET_SCREEN_DENSITY := 420
 
 # Kernel
 BOARD_BOOT_HEADER_NAME := SRPSL10A002KU
-TARGET_KERNEL_SOURCE := kernel/samsung/m31
+TARGET_KERNEL_SOURCE := kernel/samsung/$(DEVICE)
 KERNEL_CONFIG ?= $(TARGET_KERNEL_CONFIG)
-BOARD_DTBO_CFG := $(DEVICE_PATH)/kernel/m31.cfg
+BOARD_DTBO_CFG := $(DEVICE_PATH)/kernel/$(DEVICE).cfg
 BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos9611 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_NAME := SRPSL10A002KU
