@@ -85,9 +85,9 @@ PRODUCT_MAKEFILES := \
 #   havoc_$(DEVICE)-eng
 
 COMMON_LUNCH_CHOICES := \
-    lineage_$(DEVICE)-user \
-    lineage_$(DEVICE)-userdebug \
-    lineage_$(DEVICE)-eng
+    lineage_m21-user \
+    lineage_m21-userdebug \
+    lineage_m21-eng
 
 # COMMON_LUNCH_CHOICES := \
 #   rr_$(DEVICE)-user \
