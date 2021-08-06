@@ -1,1 +1,2 @@
 DEVICE := basename "$PWD"
+ANDROID_VERSION :=
