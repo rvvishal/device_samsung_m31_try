@@ -1,0 +1,1 @@
+DEVICE := basename "$PWD"
