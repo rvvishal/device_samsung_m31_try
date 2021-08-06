@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
 # Inherit common device configuration
-$(call inherit-product, device/samsung/universal9610-common/universal9610-common.mk)
+$(call inherit-product, device/samsung/universal9611-common/universal9611-common.mk)
 
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
