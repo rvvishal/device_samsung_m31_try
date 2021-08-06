@@ -24,10 +24,10 @@ $(call inherit-product, device/samsung/$(DEVICE)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common ROM stuff
-ifeq ($(ROM), lineage)
+ifeq ($(ROM_TYPE), lineage)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-else ifeq ($(ROM_TYPE), lineage)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+else ifeq ($(ROM_TYPE), aosp)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 else 
 $(call inherit-product, vendor/$(VENDOR_DIR_TYPE)/config/common.mk)
 endif
