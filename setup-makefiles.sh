@@ -17,7 +17,7 @@
 set -e
 
 # Required!
-export DEVICE=$(DEVICE)
+export DEVICE=m21
 export DEVICE_COMMON=universal9611-common
 export VENDOR=samsung
 
