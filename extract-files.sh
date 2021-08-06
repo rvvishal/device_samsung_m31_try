@@ -26,7 +26,7 @@ ROM_ROOT="$MY_DIR"/../../..
 
 # Required!
 export DEVICE=$(DEVICE)
-export DEVICE_COMMON=universal9610-common
+export DEVICE_COMMON=universal9611-common
 export VENDOR=samsung
 
 export DEVICE_BRINGUP_YEAR=2020
