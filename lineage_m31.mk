@@ -24,13 +24,7 @@ $(call inherit-product, device/samsung/$(DEVICE)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common ROM stuff
-ifeq ($(ROM_TYPE), lineage)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-else ifeq ($(ROM_TYPE), aosp)
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-else 
-$(call inherit-product, vendor/$(VENDOR_DIR_TYPE)/config/common.mk)
-endif
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -40,7 +34,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := $(DEVICE)
-PRODUCT_NAME := $(ROM)_$(DEVICE)
+PRODUCT_NAME := lineage_$(DEVICE)
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-$(DEVICE)5F
 PRODUCT_MANUFACTURER := samsung
