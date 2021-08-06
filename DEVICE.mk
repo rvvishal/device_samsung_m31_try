@@ -39,6 +39,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Device identifier. This must come after all inclusions
+DEVICE := basename "$PWD"
 PRODUCT_DEVICE := $(DEVICE)
 PRODUCT_NAME := $(ROM)_$(DEVICE)
 PRODUCT_BRAND := samsung
