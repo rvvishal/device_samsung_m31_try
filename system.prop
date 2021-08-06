@@ -1,6 +1,6 @@
 
 #
-# from device/samsung/$(DEVICE)/system.prop
+# from device/samsung/m21/system.prop
 #
 #
 # system.prop for universal9610
@@ -24,6 +24,6 @@ ro.cmc.version=2.0
 vendor.sbtvd.service.recovery=none
 #Monetization app snapchat setting
 ro.channel.com.snapchat.android=SAMSUNG-PRELOAD-07012019
-# end of device/samsung/$(DEVICE)/system.prop
+# end of device/samsung/m21/system.prop
 
 #
