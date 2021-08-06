@@ -17,7 +17,7 @@
 ANDROID_VERSION ?= $(ANDROID_VERSION)
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage.mk \
+    $(LOCAL_DIR)/lineage_m21.mk \
  
  #  $(LOCAL_DIR)/aicp.mk \
  #  $(LOCAL_DIR)/aim.mk \
