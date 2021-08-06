@@ -23,4 +23,6 @@ export VENDOR=samsung
 
 export DEVICE_BRINGUP_YEAR=2020
 
+DEVICE := basename "$PWD"
+
 "./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
