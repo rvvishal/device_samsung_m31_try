@@ -14,18 +14,10 @@
 # limitations under the License.
 #
 
-ifeq ($(COMMON_LUNCH_CHOICES), lineage_$(DEVICE)-userdebug)
-ROM=lineage VENDOR_DIR_TYPE=lineage CODENAME=lineage
-else ifeq
-ROM=sakura ROM_TYPE=lineage VENDOR_DIR_TYPE=lineage CODENAME=sakura
-else
-ROM=aosp
-endif
-
 ANDROID_VERSION ?= $(ANDROID_VERSION)
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/$(ROM)_$(DEVICE).mk
+    $(LOCAL_DIR)/rom.mk
 
 ## LINEGAE OS
 COMMON_LUNCH_CHOICES := \
