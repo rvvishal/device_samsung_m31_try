@@ -1,2 +1,2 @@
 DEVICE := basename "$PWD"
-ANDROID_VERSION :=
+expoert ANDROID_VERSION=10
