@@ -68,4 +68,4 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.exynos9611
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # Inherit common board flags
-include device/samsung/universal9610-common/BoardConfigCommon.mk
+include device/samsung/universal9611-common/BoardConfigCommon.mk
