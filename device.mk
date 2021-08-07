@@ -41,14 +41,14 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.exynos9611:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9611
+    $(LOCAL_PATH)/rootdir/etc/fstab.exynos9610:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9610
 
 # Ramdisk
 PRODUCT_PACKAGES += \
     mx_log_collection.sh \
     mx_logger.sh \
     mx_logger_dump.sh \
-    fstab.exynos9611 \
+    fstab.exynos9610 \
     ueventd.qcom.rc \
 
 # Screen density
