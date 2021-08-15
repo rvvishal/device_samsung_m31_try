@@ -27,29 +27,15 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
-# Partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # Rootdir
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.exynos9610:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9610
-
-# Ramdisk
 PRODUCT_PACKAGES += \
-    mx_log_collection.sh \
-    mx_logger.sh \
-    mx_logger_dump.sh \
-    fstab.exynos9610 \
-    ueventd.qcom.rc \
+	fstab.exynos9610 \
+	init.target.rc \
+	init.baseband.rc
 
 # Screen density
 # Device uses high-density artwork where available
@@ -58,12 +44,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-# Shipping API
-ifeq ($(ANDROID_VERSION), 10)
-PRODUCT_SHIPPING_API_LEVEL := 29
-else
-PRODUCT_SHIPPING_API_LEVEL := 30
-endif
 
 # Skip Mount
 PRODUCT_COPY_FILES += \
